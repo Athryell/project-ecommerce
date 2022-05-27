@@ -1,0 +1,45 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="row-list-bid row d-flex">
+    <div class="left-col col">
+        {% include "auctions/layout_listing.html" %}
+    </div>
+</div>
+<div class="bid-form-container container m-4 justify-content-center">
+    <div class="top-row">
+        {% if last_bid_user == current_user %}
+            <p class="text-center"> <b>{{ bid_count }}</b> bid(s) so far. <b>Your bid</b> is the current bid.  </p>
+        {% else %}
+            <p class="text-center"> <b>{{ bid_count }}</b> bid(s) so far. <b>{{ last_bid_user }}</b>'s bid is the current bid.  </p>
+        {% endif %}
+    </div>
+    <div class="bottom-row">
+        {% if user.is_authenticated and user.id != l.created_by.id%}
+        <form class="text-center" action="{% url 'listing' l.id %}" method="post">
+            {% csrf_token %}
+            {{ bid_form }}
+            <button type="submit" class="btn btn-primary p-1">Send</button> 
+        </form>
+        {% endif %}
+    </div>
+</div>
+<hr class="m-5">
+<div class="container col-md-6 justify-content-center">
+    {% for c in l.comments.all %}
+    <div class='border p-3'>
+            <p><i> {{ c.content }} </i></p>
+            <p class="text-muted"> Created by {{ c.created_by }} on {{ c.created_on }} </p>
+    </div>
+    {% endfor %}
+</div>
+<div class='container col-md-6 justify-content-center'>
+    <form action="{% url 'post_comment' l.id %}" method="post">
+        {% csrf_token %}
+        <h4 class='text-center m-3'>Write a comment:</h4>
+        {{ comment_form }}
+        <button type="submit" class="btn btn-primary mt-2">Send</button> 
+    </form>
+</div>
+{% endblock %}

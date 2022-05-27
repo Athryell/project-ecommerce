@@ -1,0 +1,14 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    {% for l in watchlist %}
+        {% include "auctions/layout_listing.html" %}
+    {% empty %}
+        <ul class="container">
+            <li class="m-5">No listings</li>
+        </ul>
+    {% endfor %}
+
+{% endblock %}

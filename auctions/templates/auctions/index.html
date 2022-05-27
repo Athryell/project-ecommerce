@@ -1,0 +1,16 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    {% for l in listings %}
+        {% if l.is_active %}
+            {% include "auctions/layout_listing.html" %}
+        {% endif %}
+    {% empty %}
+        <ul class="container">
+            <li class="m-5">No listings</li>
+        </ul>
+    {% endfor %}
+    
+{% endblock %}

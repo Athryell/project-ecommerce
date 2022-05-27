@@ -1,0 +1,22 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    {% for l in user_won %}
+        <h3 class="text-center m-3"> You won these auction: </h3>
+        {% include "auctions/layout_listing.html" %}
+    {% empty %}
+        <ul class="container">
+            <li class="m-5">You didn't win any auction yet</li>
+        </ul>
+    {% endfor %}
+
+    {% for l in user_closed %}
+        <h3 class="text-center m-3"> These are the auctions that you closed: </h3>
+        {% if not l.is_active %}
+            {% include "auctions/layout_listing.html" %}
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

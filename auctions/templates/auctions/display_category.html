@@ -1,0 +1,18 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <div>
+        <h2> Category: <b> {{ category_type }} </b></h2>
+    </div>
+
+    {% for l in category_list %}
+        {% include "auctions/layout_listing.html" %}
+    {% empty %}
+        <ul class="container">
+            <li class="m-5">No listings</li>
+        </ul>
+    {% endfor %}
+    
+{% endblock %}

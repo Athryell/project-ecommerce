@@ -1,0 +1,305 @@
+[
+{
+  "model": "auctions.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$S5smMZWy5prd4pWtEby2jC$eX/4qYfc1HMLIyZFxclcqclJ65ZYUH1cHFPjGEJymVY=",
+    "last_login": "2021-12-13T18:49:28.029Z",
+    "is_superuser": true,
+    "username": "AlePro",
+    "first_name": "",
+    "last_name": "",
+    "email": "a@b.it",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-12-13T17:13:37.090Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auctions.user",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$DCUwagRkd5YQdNqNTOlRLy$VMMr/Bsgpp66UirSlZHjQxfxv7tKDoqM/KAwdL8l3nc=",
+    "last_login": "2021-12-13T18:49:51.034Z",
+    "is_superuser": false,
+    "username": "Dummy",
+    "first_name": "",
+    "last_name": "",
+    "email": "a@b.it",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-12-13T18:47:52.907Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auctions.user",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$ovA7wLukYb3EViYFqW1rHJ$GNJn3Whzkr3n8Vq14ZjmBkGYUxOf3xUgrNTvs7M5LLk=",
+    "last_login": "2021-12-14T20:59:06.550Z",
+    "is_superuser": true,
+    "username": "Test",
+    "first_name": "",
+    "last_name": "",
+    "email": "a@b.it",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-12-14T20:58:37.623Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auctions.user",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$SK9Y65zHrcHfew5U6TVnjg$WKZwF3pyzp2Pqv94Tms71jyyVGUJypqi1Ir8yWx45lY=",
+    "last_login": "2022-06-14T15:40:48.962Z",
+    "is_superuser": true,
+    "username": "Ale",
+    "first_name": "",
+    "last_name": "",
+    "email": "a@a.it",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-06-14T14:38:35.522Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auctions.user",
+  "pk": 18,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$ms1cO3EU425nJw0HLzxZmf$zlXsrHWYzVKmNRkA/7rsduhnzrSK8ya8tPNjPnbg860=",
+    "last_login": "2022-06-14T15:52:36.031Z",
+    "is_superuser": false,
+    "username": "DemoUser",
+    "first_name": "",
+    "last_name": "",
+    "email": "demo@user.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-06-14T14:48:13.999Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auctions.category",
+  "pk": 1,
+  "fields": {
+    "category": "Generic"
+  }
+},
+{
+  "model": "auctions.category",
+  "pk": 2,
+  "fields": {
+    "category": "Pets"
+  }
+},
+{
+  "model": "auctions.category",
+  "pk": 3,
+  "fields": {
+    "category": "House"
+  }
+},
+{
+  "model": "auctions.category",
+  "pk": 4,
+  "fields": {
+    "category": "Cool Stuff"
+  }
+},
+{
+  "model": "auctions.category",
+  "pk": 5,
+  "fields": {
+    "category": "Food"
+  }
+},
+{
+  "model": "auctions.category",
+  "pk": 6,
+  "fields": {
+    "category": "Books"
+  }
+},
+{
+  "model": "auctions.listing",
+  "pk": 13,
+  "fields": {
+    "demo_hardcoded_path": "chair.jpg",
+    "is_active": true,
+    "winner": null,
+    "img": "products/Chair_Ghba67g.jpg",
+    "name_article": "Nice Chair",
+    "category": 3,
+    "price": "19.99",
+    "description": "Nice wood, four legs",
+    "created_by": 11,
+    "created_on": "2021-12-13T18:10:57.444Z",
+    "updated_on": "2022-06-14T15:10:07.503Z"
+  }
+},
+{
+  "model": "auctions.listing",
+  "pk": 17,
+  "fields": {
+    "demo_hardcoded_path": "bottle.jpg",
+    "is_active": true,
+    "winner": 16,
+    "img": "products/Bottle_of_Air_NYgVP9H.jpg",
+    "name_article": "Bottle of Air",
+    "category": 5,
+    "price": "9.99",
+    "description": "For \"breathtaking\" moments",
+    "created_by": 11,
+    "created_on": "2021-12-13T18:41:18.786Z",
+    "updated_on": "2022-06-14T15:10:50.233Z"
+  }
+},
+{
+  "model": "auctions.listing",
+  "pk": 18,
+  "fields": {
+    "demo_hardcoded_path": "dragon.jpg",
+    "is_active": true,
+    "winner": null,
+    "img": "products/Dragon_TnW5KYz.jpg",
+    "name_article": "Dragon",
+    "category": 2,
+    "price": "99999.00",
+    "description": "Warm during winter",
+    "created_by": 11,
+    "created_on": "2021-12-13T18:41:45.059Z",
+    "updated_on": "2022-06-14T15:09:59.333Z"
+  }
+},
+{
+  "model": "auctions.listing",
+  "pk": 19,
+  "fields": {
+    "demo_hardcoded_path": null,
+    "is_active": true,
+    "winner": null,
+    "img": "",
+    "name_article": "Mysterious product",
+    "category": 1,
+    "price": "500.00",
+    "description": "You won't regret it!",
+    "created_by": 11,
+    "created_on": "2021-12-13T18:42:39.987Z",
+    "updated_on": "2021-12-13T18:42:39.987Z"
+  }
+},
+{
+  "model": "auctions.listing",
+  "pk": 20,
+  "fields": {
+    "demo_hardcoded_path": "telephone.jpg",
+    "is_active": true,
+    "winner": null,
+    "img": "products/Telephone_zz0D8HN.jpg",
+    "name_article": "Cleverphone",
+    "category": 4,
+    "price": "200.00",
+    "description": "Better than smartphone",
+    "created_by": 11,
+    "created_on": "2021-12-13T18:46:58.797Z",
+    "updated_on": "2022-06-14T15:04:25.957Z"
+  }
+},
+{
+  "model": "auctions.bid",
+  "pk": 13,
+  "fields": {
+    "bid_amount": "11.99",
+    "bid_listings_id": 17,
+    "bid_created_by_id": 14,
+    "bid_created_on": "2021-12-13T18:48:51.922Z"
+  }
+},
+{
+  "model": "auctions.watchlist",
+  "pk": 8,
+  "fields": {
+    "user": 11,
+    "products": []
+  }
+},
+{
+  "model": "auctions.watchlist",
+  "pk": 10,
+  "fields": {
+    "user": 14,
+    "products": [
+      19
+    ]
+  }
+},
+{
+  "model": "auctions.watchlist",
+  "pk": 11,
+  "fields": {
+    "user": 15,
+    "products": [
+      13
+    ]
+  }
+},
+{
+  "model": "auctions.watchlist",
+  "pk": 12,
+  "fields": {
+    "user": 18,
+    "products": [
+      17
+    ]
+  }
+},
+{
+  "model": "auctions.watchlist",
+  "pk": 13,
+  "fields": {
+    "user": 16,
+    "products": []
+  }
+},
+{
+  "model": "auctions.comment",
+  "pk": 24,
+  "fields": {
+    "content": "You can try to fry it! It's amazing!",
+    "item_commented": 17,
+    "created_by": 16,
+    "created_on": "2022-06-14T15:41:34.559Z"
+  }
+},
+{
+  "model": "auctions.comment",
+  "pk": 25,
+  "fields": {
+    "content": "Be careful: at the beginning it's just and egg but then it needs A LOT of food.\r\n\r\nIt's cute though",
+    "item_commented": 18,
+    "created_by": 16,
+    "created_on": "2022-06-14T15:44:06.935Z"
+  }
+},
+{
+  "model": "auctions.comment",
+  "pk": 26,
+  "fields": {
+    "content": "Need whatsapp ASAP!",
+    "item_commented": 20,
+    "created_by": 16,
+    "created_on": "2022-06-14T15:45:06.693Z"
+  }
+}
+]

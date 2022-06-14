@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/Ale/Desktop/My_WebSites/My_Projects/CS50/gee-commerce/venv_commerce"
+VIRTUAL_ENV="/Users/Ale/Desktop/My_WebSites/My_Projects/CS50/commerce/venv_comm"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -54,7 +54,7 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    PS1="(venv_commerce) ${PS1:-}"
+    PS1="(venv_comm) ${PS1:-}"
     export PS1
 fi
 

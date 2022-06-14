@@ -33,7 +33,11 @@ SECRET_KEY = os.environ.get('COMMERCE_SECRET_KEY')
 DEBUG = (os.environ.get('COMMERCE_DEBUG_VALUE') == 'True')
 DEBUG = True
 
-ALLOWED_HOSTS = ['gee-commerce.herokuapp.com']
+ALLOWED_HOSTS = [
+    'gee-commerce.herokuapp.com',
+    'localhost',
+    '127.0.0.1'
+]
 
 
 # Application definition

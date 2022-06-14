@@ -9,6 +9,7 @@ from .models import *
 
 
 def index(request):
+
     try:
         watch_count = len(request.user.watchlist.get().products.all())
     except:
@@ -212,6 +213,7 @@ def login_view(request):
         # Attempt to sign user in
         username = request.POST["username"]
         password = request.POST["password"]
+        print(username)
         user = authenticate(request, username=username, password=password)
 
         # Check if authentication successful
@@ -219,10 +221,10 @@ def login_view(request):
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
         else:
-            return render(request, "auctions/login.html", {
-                "message": "Invalid username and/or password."
-            })
+            messages.warning (request, 'Invalid Username or Password')
+            return render(request, "auctions/login.html")
     else:
+        messages.info (request, 'This is a Demo, but you can quick log in with this user!')
         return render(request, "auctions/login.html")
 
 

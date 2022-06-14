@@ -3,13 +3,9 @@
 {% block body %}
 <div class="container">
 
-    {% if message %}
-        <div>{{ message }}</div>
-    {% endif %}
-
     <br>
 
-    <form action="{% url 'register' %}" method="post">
+    <form class="p-3" action="{% url 'register' %}" method="post">
         {% csrf_token %}
         <div class="form-group">
             <input class="form-control" autofocus type="text" name="username" placeholder="Username">
@@ -26,6 +22,8 @@
         <input class="btn btn-primary" type="submit" value="Register">
     </form>
 
-    Already have an account? <a href="{% url 'login' %}">Log In here.</a>
-</div>
+    <p class="p-3">
+        Already have an account? <a href="{% url 'login' %}">Log In here.</a>
+        </div>
+    </p>
 {% endblock %}

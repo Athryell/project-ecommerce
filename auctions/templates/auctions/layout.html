@@ -3,62 +3,62 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Bootstrap -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'auctions/styles.css' %}">
-        {# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> #}
 
-        <title>{% block title %}Auctions{% endblock %}</title>
+        <title>{% block title %}Gee-commerce{% endblock %}</title>
     </head>
     <body>
         <div class="container">
-            <h1 class="text-center p-3">Auctions</h1>
+            <h1 class="text-center p-3">Unimaginable Auctions</h1>
         </div>
         <div class="container d-flex sticky-top bg-white">
             {% with url_name=request.path %}
-            <ul class="nav nav-pills">
-                <li class="nav-item">
+            <ul class="nav nav-pills m-3">
+                <li class="nav-item mr-3">
                 {% url 'index' as index %}
                     <a class="nav-link border {% if url_name == index %}active{% endif %}" href="{% url 'index' %}">
                         Active Listings
                     </a>
                 </li>
                 {% if user.is_authenticated %}
-                    <li class="nav-item">
+                    <li class="nav-item mr-3">
                         {% url 'categories' as cat %}
                         {% url 'display_category' as display_cat %}
                         <a class="nav-link border {% if url_name == cat or url_name == display_cat %}active{% endif %}" href="{% url 'categories' %}">
                             Categories
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mr-3">
                         {% url 'watchlist' as watch %}
                         <a class="nav-link border {% if url_name == watch %}active{% endif %}" href="{% url 'watchlist' %}">
                             Watchlist <span class="badge badge-secondary">{{ watch_count }}</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mr-3">
                         {% url 'create_listing' as create_l %}
                         <a class="nav-link border {% if url_name == create_l %}active{% endif %}" href="{% url 'create_listing' %}">
                             Create Listing
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mr-3">
                         {% url 'closed_auctions' as closed_auct %}
                         <a class="nav-link border {% if url_name == closed_auct %}active{% endif %}" href="{% url 'closed_auctions' %}">
                             Closed auctions
                         </a>
                     </li>
                 {% else %}
-                    <li class="nav-item">
+                    <li class="nav-item mr-3">
                         {% url 'login' as log %}
                         <a class="nav-link border {% if url_name == log %}active{% endif %}" href="{% url 'login' %}">
                             Log In
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mr-3">
                         {% url 'register' as reg %}
                         <a class="nav-link border {% if url_name == reg %}active{% endif %}" href="{% url 'register' %}">
                             Register

@@ -26,6 +26,7 @@ class Category(models.Model):
     
 
 class Listing(models.Model):
+    demo_hardcoded_path = models.CharField(max_length=32, blank=True, null=True)
     is_active = models.BooleanField(default='True')
     winner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='won', blank=True, null=True)
     img = models.ImageField(upload_to='products', null=True, blank=True)

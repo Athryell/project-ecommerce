@@ -2,19 +2,21 @@
 <div class="container">
     <div class="listing-box row m-3 p-2 border">
         <div class="left-big-col col-4 align-self-center d-flex justify-content-center">
-            <a href="{% url "listing" l.id %}">
-                {% if l.img %}
-                        <img src="{% static l.img.url %}" class="img-fluid rounded" alt="Product image">
+            <a href="{% url 'listing' l.id %}">
+                <!-- This is only for the purposes of the demo project -->
+                <img src="{% static 'media/products/' %}{{ l.demo_hardcoded_path }}" class="img-fluid rounded" alt="{{ l.name_article }}">
+                <!-- {% if l.img %}
+                    <img src="{% static l.img.url %}" class="img-fluid rounded" alt="Product image">
                 {% else %}
                     <p class="test-muted text-center">No image available</p>
-                {% endif %}
+                {% endif %} -->
             </a>
         </div>
         <div class="right-big-content-col col">
             <div class="right-big-content-row row p-2">
                 <div class="listing-info-col-topleft col">
                     <h3>
-                        <a href="{% url "listing" l.id %}" class="listing-title">
+                        <a href="{% url 'listing' l.id %}" class="listing-title">
                             {{ l.name_article }} {% if not l.is_active %} (CLOSED) {% endif %}
                         </a>
                     </h1>

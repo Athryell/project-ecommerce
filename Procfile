@@ -1,0 +1,1 @@
+web: gunicorn gee-commerce.wsgi

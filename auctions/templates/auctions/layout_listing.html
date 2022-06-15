@@ -3,13 +3,15 @@
     <div class="listing-box row m-3 p-2 border">
         <div class="left-big-col col-4 align-self-center d-flex justify-content-center">
             <a href="{% url 'listing' l.id %}">
-                <!-- This is only for the purposes of the demo project -->
                 <img src="{% static 'media/products/' %}{{ l.demo_hardcoded_path }}" class="img-fluid rounded" alt="{{ l.name_article }}">
-                <!-- {% if l.img %}
+                <!-- This is only for the purposes of the demo project -->
+                {% comment %}
+                    {% if l.img %}
                     <img src="{% static l.img.url %}" class="img-fluid rounded" alt="Product image">
-                {% else %}
+                    {% else %}
                     <p class="test-muted text-center">No image available</p>
-                {% endif %} -->
+                    {% endif %}
+                {% endcomment %}
             </a>
         </div>
         <div class="right-big-content-col col">
